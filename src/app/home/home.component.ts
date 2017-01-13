@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import {AbstractControl, FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import {Observable} from 'rxjs/Observable';
 import { SubComponent } from './home-child.component';
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   private anyErrors: boolean;
   private finished: boolean;*/
  
-  constructor(public fb: FormBuilder) { 
+  constructor(public fb: FormBuilder, private el: ElementRef) { 
       this.form = this.fb.group({
         name:'',
         email:''
@@ -29,6 +29,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    Observable.fromEvent(this.el.nativeElement, 'keyup')
+     .map((e: any) => e.target.value) // extract the value of the input
+     .filter((text: string) => text.length > 1) // filter out if empty
+     .debounceTime(250) // only once every 250ms
+     .do(() => console.log('aaa')); // enable loading
+ // search, discarding old events if new input comes in
+
+
   }
 
   init() {
