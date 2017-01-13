@@ -1,0 +1,122 @@
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
+}
+
+form.ui.segment.form {
+  background-color: #F1F9FF;
+  margin-top: 2em;
+}
+
+form.form:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6E6E6;
+  padding: 1em 0;
+  border-radius: 5px;
+}
+
+.ui.grid.posts {
+  margin-top: 2em;
+}
+
+.meta {
+  color: #9A9A9A
+}
+
+.ui.grid>.row>.column.votes {
+  display: flex;
+}
+
+ul.ui.list li:before {
+  content: '';
+}
+
+   ul.rig {
+      list-style: none;
+      font-size: 0px;
+      margin-left: -2.5%; /* should match li left margin */
+    }
+    ul.rig li {
+      display: inline-block;
+      padding: 10px;
+      margin: 0 0 2.5% 2.5%;
+      background: #fff;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      font-size: 1rem;
+      vertical-align: top;
+      box-shadow: 0 0 5px #ddd;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    ul.rig li img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 10px;
+    }
+    ul.rig li h3 {
+      margin: 0 0 5px;
+    }
+    ul.rig li p {
+      font-size: .9em;
+      line-height: 1.5em;
+      color: #999;
+    }
+    /* class for 2 columns */
+    ul.rig.columns-2 li {
+      width: 47.5%; /* this value + 2.5 should = 50% */
+    }
+    /* class for 3 columns */
+    ul.rig.columns-3 li {
+      width: 30.83%; /* this value + 2.5 should = 33% */
+    }
+    /* class for 4 columns */
+    ul.rig.columns-4 li {
+      width: 22.5%; /* this value + 2.5 should = 25% */
+    }
+     
+    @media (max-width: 480px) {
+      ul.grid-nav li {
+        display: block;
+        margin: 0 0 5px;
+      }
+      ul.grid-nav li a {
+        display: block;
+      }
+      ul.rig {
+        margin-left: 0;
+      }
+      ul.rig li {
+        width: 100% !important; /* over-ride all li styles */
+        margin: 0 0 20px;
+      }
+    }
+
+.addproduct-box{
+  border: 1px solid;    
+  padding:10px 30px 10px 30px;
+  border-radius: 25px;
+}
+.box{
+  border: 1px;
+  background-color: #40A3F3;
+  padding:10px;
+  border-radius: 25px;
+}
+.box img{
+  margin-right: 20px;
+  margin-top: -60px;
+  }
+.outerbox{
+  margin-top: 10px;   
+}

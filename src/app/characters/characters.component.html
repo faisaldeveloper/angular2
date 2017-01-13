@@ -1,0 +1,35 @@
+<article>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+<child-selector [title]='childTitle' (notify)='onNotify($event)' (like)='whenLiked($event)'></child-selector>
+
+<div *ngIf="eventMsg" class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{eventMsg}}
+</div>
+    </div>
+  </div>
+
+<hr>
+  <div class="row">
+  <div class="col-sm-4 col-sm-offset-1">
+  <story-character [character]="selectedCharacter"></story-character>
+  <ul class="characters">
+    <li *ngFor="let character of characters">
+       <div (click)="select(character)"
+        [class.selected]="character === selectedCharacter"
+        >{{character.id}}. {{character.name}}</div>
+    </li>
+  </ul>
+  
+  </div>
+  <div class="col-sm-4 col-sm-offset-1">
+  <story-character [car]="selectedCar"></story-character>
+  <ul class="characters">
+    <li *ngFor="let car of cars">
+       <div (click)="selectCar(car)" [class.selected]="car === selectedCar">{{car.id}}. {{car.name}} - {{car.type}}</div>
+    </li>
+  </ul>
+</div>
+</div>
+</article>
